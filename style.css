@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #e4d9d9;
+    color:black;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff7eb3;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-icons .icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.menu-list {
+    display: flex;
+    gap: 26px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #100f0f;
+    font-weight: bold;
+}
+.menu-list a:hover {
+    color: #948787;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-icon img {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    /* Show Hamburger */
+    .menu-icon img {
+        display: block;
+    }
+    .menu-list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background: white;
+        width: 200px;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px  rgba(0, 0, 0, 0.12);
+        z-index: 999;
+    }
+
+    #menu-toggle:checked ~ .menu-list {
+        display: flex;
+    }
+}
+.hero {
+    padding: 60px 30px;
+    text-align: center;
+    background: #ffe6f0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+section {
+    padding: 40px 30px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    color: #ff7eb3;
+}
+.products {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+form {
+    max-width: 450px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 12px 22px;
+    background: #ff7eb3;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #ff4f8a;
+}
